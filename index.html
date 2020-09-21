@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>국립현대미술관</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/resest.css"/>
+    <!--  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />-->
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <script
+      src="https://kit.fontawesome.com/936afef469.js" 
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!--<script
+      type="text/javascript"
+      src="slick-1.8.1/slick/slick.min.js"
+    ></script>-->
+    <!-- <script src="https://use.fontawesome.com/3ed397331b.js"></script> -->
+
+    <script>
+
+        var slideIndex = 0;
+        showSlide();
+
+          function showSlide(){
+            var i;
+            var slides = document.getElementsByClassName("slide_list02");
+            for(i=0; i < slides.length; i++){
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+              slideIndex=1 
+            }
+
+            slides[slideIndex-1].style.display= "block";
+            setTimeout(showSlide, 4000);
+          }        
+
+
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrap">
+        <div class="logo">
+          <img src="./image/logo.png" alt="logo-img" />
+        </div>
+        <div class="tnb">
+          <ul>
+            <li><a href="#">로그인</a>&nbsp;ㅣ</li>
+            <li><a href="#">회원가입</a>&nbsp;ㅣ</li>
+            <li><a href="#">공지사항</a>&nbsp;ㅣ</li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+        </div>
+      </div>
+    
+  
+        <ul class="main_menu">
+         <li class="lng">
+           <a class="link" href="#">Languages</a>
+           <ul class="lng_smenu">
+             <li><a href="#">Korean</a></li>
+             <li><a href="#">English</a></li>
+           </ul>
+         </li>
+          <li>
+            <a class="link"  href="#">Exihibitions</a>
+            <ul class="sub_menu">
+              <li><a href="#">전시일정</a></li>
+              <li><a href="#">전시장안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a  class="link" href="#">Program</a>
+            <ul class="sub_menu">
+              <li><a href="#">프로그램소개</a></li>
+              <li><a href="#">신청안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="link"  href="#">Education</a>
+            <ul class="sub_menu">
+              <li><a href="#">교육소개</a></li>
+              <li><a href="#">참여신청</a></li>
+              <li><a href="#">어린이미술관</a></li>
+              <li><a href="#">교육자료실</a></li>
+              <li><a href="#">교육사진</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="link"  href="#">Online Art</a>
+            <ul class="sub_menu">
+              <li><a href="#">온라인 소개</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="link" href="#">Visit</a>
+            <ul class="sub_menu">
+              <li><a href="#">오시는길</a></li>
+              <li><a href="#">편의서비스</a></li>
+              <li><a href="#">공간안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <style>
+     
+    </style>
+    <aside>
+      <div class="icon-bar">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+          <li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>  
+        
+        </ul>
+       </div>
+
+    </aside>
+    <section>
+      <div class="main_slide">
+        <div class="img_slide">
+          <div>
+          <img src="./image/main_img04(3).jpg" alt="모네" />
+          <div class="content">
+            <h1>Heading</h1>
+            <p>Lorem ipsum..</p>
+          </div>
+        </div>
+          <div><img src="" alt="" /></div>
+        </div>
+
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+
+      <script>
+        $(function () {
+          var timer = setInterval(slide, 2000);
+          var n = 0;
+          function slide() {
+            n++;
+            $(".img_slide").animate({ "margin-left": "-389" * n });
+            if (n >= 2) n = -1;
+          }
+
+          // 사이드메뉴 슬라이드 
+          
+          var timer = setInterval(slide, 5000);
+          var n =1;
+          function slide(){
+            n++;
+            $(".slide_list01").animate({"margin-left":"-430" *n});
+            if(n >=2) n = -1;
+          }
+
+        })
+      
+
+      </script>
+      <!--dot/circles-->
+      <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <div class="main-container">
+       
+        <div class="exhibition">
+          <h1>What's on</h1>
+          <ul class="online-program">      
+            <h2>Online Exhibitions</h2>    
+          <button type="button" class="viewmore">View More</button>  
+        
+          <li class="con">
+          <div class="img-container">  
+           <a href="#"><img src="./image/img_03.jpg" alt="오믈라 루" class="img-hover-item"/>       
+          </a>
+          <button type="button" class="seemore"> See More </button> 
+            <div class='img-overlay'></div>   
+            <div class="inner_box">
+              <p>I Draw :&nbsp; Oamul Lu</p>
+              <span class="date">20.09.07 Mon - 20.09.27 Sun </span>
+              <span class="current">onging</span>
+              
+            </div>
+            </div>
+             
+            </li>
+            <li class="con">
+              <div class="img-container">  
+              <a href="#"><img src="./image/img_04.jpg" alt="빨강머리앤" class="img-hover-item"/></a>
+              <button type="button" class="seemore"> See More </button>
+              <div class='img-overlay'></div>
+              <div class="inner_box">
+                <p>나의 빨강머리앤 &nbsp;</p>
+                <span class="date">20.09.10 Thu - 20.09.30 Wed </span>
+                <span class="current">onging</span>
+              </div>
+            </div>
+             
+            </li>
+            <li class="con">
+              <div class="img-container">  
+              <a href="#"><img src="./image/img_05.jpg" alt="art03" class="img-hover-item"/></a>
+              <button type="button" class="seemore"> See More</button>
+              <div class='img-overlay'></div>
+              <div class="inner_box">
+                <p>희망&힐링타임 &nbsp;</p>
+                <span class="date">20.09.30 Wed - 20.10.16 Fri</span>
+                <span class="current">upcoming</span>
+                
+              </div>
+            </div> 
+            </li>          
+          </ul>
+        
+          <ul class="offline-program">
+            <h2>Visit</h2>
+            <button type="button" class="viewmore">View More</button>
+            <li class="con">
+              <div class="img-container">  
+              <a href="#"><img src="./image/img_06.jpg" alt="에릭요한슨전" class="img-hover-item" /></a>
+              <button type="button" class="seemore"> See More</button>
+              <div class='img-overlay'></div>
+              <div class="inner_box">
+                <p>에릭요한슨 展 &nbsp;</p>
+                <span class="date">20.10.01 Thu - 20.11.25 Wed</span>
+                <span class="current">onging</span>
+
+              </div>
+            </div>
+            </li>
+            <li class="con">
+              <div class="img-container">  
+              <a href="#"><img src="./image/img_07.jpg" alt="현대미술 재발견" class="img-hover-item" /></a>
+              <button type="button" class="seemore"> See More</button>
+              <div class='img-overlay'></div>
+              <div class="inner_box">
+                <p>현대미술 재발견 </p>
+                <span class="date">20.11.11 Wed - 20.12.26 Sat</span>
+                <span class="current">onging</span>               
+              </div>
+              </div>
+            </li>
+            <li class="con">
+              <div class="img-container">  
+              <a href="#"><img src="./image/img_08.jpg" alt="피카소의 큐비즘" class="img-hover-item" /></a>
+              <button type="button" class="seemore"> See More</button>
+              <div class='img-overlay'></div>
+              <div class="inner_box">
+                <p>피카소와 큐비즘</p>
+                <span class="date">20.12.12 Sat - 21.02.13 Sat</span>
+                <span class="current">upcoming</span>            
+              </div>
+              </div>
+            </li>
+          </ul>
+        </div>        
+      </div>
+
+     <div class="main_side">
+       <h2>EVENT</h2>
+       <hr>
+      <div class="sidemenu01">
+        <div class="sub_title01">
+          <h2># ART STORY</h2>
+          <span> 큐레이터가 전하는 STORY</span>
+        </div>
+        <div class="slider01 fade">  
+          <div class="slide_list01 left">
+            <div class="slide_item">
+              <img src="./image/art_story01.jpg" alt="">        
+              <div class="text"> #01 빛의 공간 </div>
+              
+            </div>
+            <div class="slide_item">
+              <img src="./image/art_story02.jpg" alt="">
+              <div class="text">#02 Timeline of ArtStory</div>
+            </div>
+              <div class="slide_item">
+              <img src="./image/art_story03.jpg" alt="">
+              <div class="text">#03 Coco’s Photography:Self Portraits </div>
+            </div>         
+        </div>
+        </div>
+      </div> 
+      <div class="sidemenu02">
+        <div class="sub_title02">
+          <h2>NEWS</h2>
+        </div>
+        <div class="slider02 fade">
+          <div class="slide_list02 right">
+            <div class="slide_item"><img src="./image/event01.jpg" alt=""></div>
+            <div class="slide_item"><img src="./image/event02.jpg" alt=""></div>
+            <div class="slide_item"><img src="./image/event03.jpg" alt=""></div>         
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="guide_menu">
+      <div class="bg_image">
+    <ul>
+      <li class="guide01 left">
+      <div class="ticket">
+        <i class="fas fa-ticket-alt"></i>
+      </div>
+      
+      <strong>  TICKET </strong>
+      <span class="select01"><a href="#">Member Ticket </a> </span>
+      <span class="select02"><a href="#">Admission</a></span>  
+    </li>
+    </ul>
+    <ul>
+    <li class="guide02 right">
+      <div class="user">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      
+      <strong>  MEMBERSHIP </strong>
+      <span class="select01"><a href="#">Membership Benefits</a></span>
+      <span class="select02"><a href="#">Member Program</a></span>
+    </li>
+  </ul>
+</div>
+  </div>
+    </section>
+    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+    <footer>
+      <div class="main_footer">
+        <div class="footer_connect">
+          <ul class="sns_channel left">
+            <li><span> Connect With Us </span></li>
+            <li>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </li>
+          </ul>
+
+          <ul class="info_nav right">
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_info">
+          <img src="image/logo01.png" alt="logo" />
+          <div class="adress">
+            <p>
+              대표자 박수지 &nbsp;<span>ㅣ</span> 사업자등록번호 123-65-32389
+            </p>
+            <br />
+            <p>
+              Copyright (c)2018 National Museum of Modern and Contemporary Art,
+              Korea All rights reserved.
+            </p>
+            <br />
+            <p>국립현대미술관 고객센터 : 02-520-1000 (AM 09:00 - PM 08:00)</p>
+          </div>
+        </div>
+
+        <div class="pop_content"></div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
